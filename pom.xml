@@ -26,10 +26,12 @@
     <repository>
       <!-- See maven settings.xml servers section with corresponding id -->
       <id>spacesurfer.release</id>
+      <url>${repository-upload-spacesurfer-release-url}</url>
     </repository>
     <snapshotRepository>
       <!-- See maven settings.xml servers section with corresponding id -->
       <id>spacesurfer.snapshot</id>
+      <url>${repository-upload-spacesurfer-snapshot-url}</url>
     </snapshotRepository>
   </distributionManagement>
 
@@ -109,6 +111,11 @@
             </configuration>
           </execution>
         </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <version>3.0.0-M2</version>
       </plugin>
     </plugins>
     <extensions>
